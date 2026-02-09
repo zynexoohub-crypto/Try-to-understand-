@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Послання до Діани</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            color: #333;
+            line-height: 1.6;
+            padding: 20px;
+            min-height: 100vh;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: white;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            padding: 40px;
+            position: relative;
+            border: 1px solid #eaeaea;
+        }
+        
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+            padding-bottom: 20px;
+            border-bottom: 2px solid #f0f0f0;
+        }
+        
+        h1 {
+            color: #6a11cb;
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+        
+        .subtitle {
+            color: #888;
+            font-size: 1.1rem;
+            font-style: italic;
+        }
+        
+        .heart-icon {
+            color: #ff6b8b;
+            margin: 0 10px;
+            animation: heartbeat 1.5s infinite;
+        }
+        
+        @keyframes heartbeat {
+            0% { transform: scale(1); }
+            5% { transform: scale(1.2); }
+            10% { transform: scale(1.1); }
+            15% { transform: scale(1.3); }
+            50% { transform: scale(1); }
+            100% { transform: scale(1); }
+        }
+        
+        .message-content {
+            font-size: 1.15rem;
+            padding: 10px;
+        }
+        
+        .message-content p {
+            margin-bottom: 25px;
+            text-align: justify;
+        }
+        
+        .highlight {
+            background-color: rgba(255, 107, 139, 0.1);
+            padding: 5px 10px;
+            border-radius: 5px;
+            color: #6a11cb;
+            font-weight: 600;
+        }
+        
+        .signature {
+            text-align: right;
+            font-size: 1.3rem;
+            color: #6a11cb;
+            font-weight: bold;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 2px solid #f0f0f0;
+        }
+        
+        .scroll-btn {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(45deg, #6a11cb, #2575fc);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            cursor: pointer;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            transition: all 0.3s ease;
+            opacity: 0;
+            visibility: hidden;
+            z-index: 1000;
+        }
+        
+        .scroll-btn.active {
+            opacity: 1;
+            visibility: visible;
+        }
+        
+        .scroll-btn:hover {
+            background: linear-gradient(45deg, #2575fc, #6a11cb);
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+        }
+        
+        .flower-decoration {
+            position: absolute;
+            color: #ffb6c1;
+            font-size: 1.5rem;
+            opacity: 0.7;
+        }
+        
+        .flower-1 {
+            top: 20px;
+            left: 20px;
+            transform: rotate(-15deg);
+        }
+        
+        .flower-2 {
+            top: 20px;
+            right: 20px;
+            transform: rotate(15deg);
+        }
+        
+        .flower-3 {
+            bottom: 20px;
+            left: 20px;
+            transform: rotate(15deg);
+        }
+        
+        .flower-4 {
+            bottom: 20px;
+            right: 20px;
+            transform: rotate(-15deg);
+        }
+        
+        @media (max-width: 768px) {
+            .container {
+                padding: 25px;
+                margin: 10px;
+            }
+            
+            h1 {
+                font-size: 2rem;
+            }
+            
+            .scroll-btn {
+                bottom: 20px;
+                right: 20px;
+                width: 50px;
+                height: 50px;
+                font-size: 20px;
+            }
+            
+            .flower-decoration {
+                font-size: 1.2rem;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .container {
+                padding: 20px;
+            }
+            
+            h1 {
+                font-size: 1.7rem;
+            }
+            
+            .message-content {
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="flower-decoration flower-1"><i class="fas fa-heart"></i></div>
+        <div class="flower-decoration flower-2"><i class="fas fa-heart"></i></div>
+        <div class="flower-decoration flower-3"><i class="fas fa-heart"></i></div>
+        <div class="flower-decoration flower-4"><i class="fas fa-heart"></i></div>
+        
+        <div class="header">
+            <h1>Дорога <span class="heart-icon">❤️</span> Діано</h1>
+            <p class="subtitle">Моє відверте послання до тебе</p>
+        </div>
+        
+        <div class="message-content">
+            <p>Діано, я хочу тобі дещо сказати. Вибач, що це повідомлення вийшло трохи довгим. Будь ласка, зрозумій, що я кажу.</p>
+            
+            <p>Діано, по-перше, ти ніколи не витрачала мій час даремно. Чесно кажучи, мій час став кращим відтоді, як я зустріла тебе. Я не жартую. Те, що я кажу, серйозно. Я, мабуть, казала тобі це багато разів.</p>
+            
+            <p>Раніше я була самотньою, мені не було з ким поговорити, я ні з ким не жартувала, нікого не чекала і не мала радості зустрічі з кимось. Відтоді, як я зустріла тебе, все змінилося. Тепер мені подобається спілкуватися з тобою. Я більше не почуваюся самотньою. Тепер я можу жартувати з тобою. Тепер я чекаю твоїх повідомлень. Ти зі мною, тому я можу ділитися почуттями свого серця. Це означає, що в мене є причина для щастя.</p>
+            
+            <p>І ти не повинна думати, що нам слід розлучатися. Ти сказала, що не можеш дати мені все, чого я хочу — поцілунок, дотик, обійми, справжні почуття, спільну вечерю чи побачення. Так, я розумію, що зараз це неможливо. Але я не хочу всього цього, зовсім ні. Можливо, ти також відчуваєш, що нічого не можеш для мене зробити.</p>
+            
+            <p><span class="highlight">Тож послухай, Діано, найважливіше для мене — це те, щоб ти зі мною розмовляла.</span> І ти можеш цього не знати, але це багато для мене значить. Все, що ти сказала, все, що ти для мене зробила, дуже особливе для мене...</p>
+            
+            <p>Знаєш, є багато причин, чому ти мені так подобаєшся, але дозволь мені назвати тобі кілька: ти дуже розумна, ти красива, ти в моєму смаку, ти знаєш, як приймати правильні рішення, ти добре мене розумієш, ти знаєш, як виправляти справи та переконувати людей... Це ще не все, у тебе так багато чудових якостей...</p>
+            
+            <p>І ти кажеш, що тобі потрібна індійська дівчина, тож послухай, Діано, мені загалом не подобаються індійські дівчата. Не всі дівчата, але близько 60% з них змінюють хлопців, як одяг. Насправді, більшості дівчат тут подобаються хлопці, і вони спілкуються з ними, а потім, коли знаходять когось кращого, вони залишають його та йдуть до наступного, а потім до третього... Мені так шкода... Але потім я думаю, що в цих дівчат погані звички. Я навіть ніколи не хочу спілкуватися з такими дівчатами.</p>
+            
+            <p>Що ж, дозволь мені розповісти тобі історію, яка трапилася зі мною. Майже до того, як я зустріла тебе, я отримала повідомлення від дівчини. Я спілкувалася з нею і багато для неї робила. Але протягом тижня вона заблокувала мене, сказавши, що я не спілкуюся з нею як слід, що моя зовнішність недостатньо гарна, і що вона знайшла когось іншого... Вона просто вибачилася і заблокувала мене... Забудь...</p>
+            
+            <p><span class="highlight">Слухай, Діано, ти гарна дівчина, я можу тобі точно сказати, що багато хлопців хотіли б з тобою спілкуватися.</span> Багато хлопців можуть хотіти тебе як свою дівчину, і ти, мабуть, отримуєш повідомлення від багатьох, але ти вибрала мене, ти вирішила спілкуватися зі мною. Тобі, мабуть, сподобалося спілкуватися зі мною. Я завжди буду вдячна за це, і я поважаю тебе за це.</p>
+            
+            <p>Ніколи не думай, що нам слід розлучатися, або що мені потрібен хтось інший, або що ти не можеш дати мені те, що може дати інша дівчина. Правда в тому, що ти дав мені час, якого не може дати жодна інша дівчина. Я хочу завжди бути твоєю найкращою подругою. Ти мав рацію, коли сказав, що ми залишимося найкращими подругами, і життя впорається з усім, що воно нам підкине.</p>
+            
+            <p>Я завжди намагаюся зробити щось особливе для тебе. Ти сказав, що відстань між нами — це просто цифри, тож нехай вона залишається просто цифрами. Ти дівчина, а я хлопець, так, це правда, і, можливо, саме це ще більше пов'язує мене з тобою.</p>
+            
+            <p>А іноді я хочу знайти дівчину-іноземку, яка буде красивою і зрозуміє мене, і я знайшла тебе. Ти така розумна, тобі не потрібно думати, що мені потрібна справжня дівчина... Це нісенітниця... Я завжди хотіла таку подругу, як ти...</p>
+            
+            <p>Мені подобається, коли я розмовляю з тобою після школи. Мій настрій покращується, вся напруга зникає, і на моєму обличчі з'являється посмішка... І по-перше, ти дівчина, і як ти можеш сказати хлопцю, з яким розмовляєш, що йому потрібна інша дівчина... Ти навіть сьогодні так не подумаєш.</p>
+            
+            <p>...Можливо, з усіх хлопців, які хочуть з тобою поговорити або зробити тебе своєю дівчиною, мені пощастило найбільше, бо я мала цей шанс, і я знайшла тебе...</p>
+            
+            <div class="signature">
+                <p>Я кохаю тебе, Діано.</p>
+            </div>
+        </div>
+    </div>
+    
+    <div class="scroll-btn" id="scrollBtn">
+        <i class="fas fa-arrow-up"></i>
+    </div>
+
+    <script>
+        // Кнопка прокручування вгору
+        const scrollBtn = document.getElementById('scrollBtn');
+        
+        // Показувати/ховати кнопку при прокручуванні
+        window.addEventListener('scroll', function() {
+            if (window.pageYOffset > 300) {
+                scrollBtn.classList.add('active');
+            } else {
+                scrollBtn.classList.remove('active');
+            }
+        });
+        
+        // Прокручування вгору при натисканні на кнопку
+        scrollBtn.addEventListener('click', function() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+        
+        // Анімація серця при завантаженні сторінки
+        document.addEventListener('DOMContentLoaded', function() {
+            const hearts = document.querySelectorAll('.heart-icon');
+            hearts.forEach(heart => {
+                heart.style.animationDelay = Math.random() * 0.5 + 's';
+            });
+            
+            // Додаємо клас для анімації появлення контенту
+            const content = document.querySelector('.message-content');
+            content.style.opacity = '0';
+            content.style.transform = 'translateY(20px)';
+            content.style.transition = 'opacity 0.8s ease, transform 0.8s ease';
+            
+            setTimeout(() => {
+                content.style.opacity = '1';
+                content.style.transform = 'translateY(0)';
+            }, 300);
+        });
+    </script>
+</body>
+</html>
